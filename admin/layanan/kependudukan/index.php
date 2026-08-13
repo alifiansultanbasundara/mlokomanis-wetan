@@ -77,6 +77,8 @@ $hamlets = mysqli_query(
      ORDER BY hamlet ASC"
 );
 
+include APP_PATH . "includes/admin/layout-top.php"
+
 ?>
 
 <!DOCTYPE html>
@@ -531,15 +533,23 @@ $hamlets = mysqli_query(
 
                                                 <!-- Delete -->
 
-                                                <a
-                                                    href="delete.php?id=<?= $row['id'] ?>"
-                                                    title="Hapus"
-                                                    onclick="return confirm('Yakin ingin menghapus data penduduk ini?')"
-                                                    class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-red-50 text-red-600 transition hover:bg-red-100">
+                                                <form
+                                                    action="delete.php"
+                                                    method="POST"
+                                                    class="inline"
+                                                    onsubmit="return confirm('Yakin ingin menghapus data penduduk ini?')">
+                                                    <input
+                                                        type="hidden"
+                                                        name="id"
+                                                        value="<?= $row['id'] ?>">
 
-                                                    <i class="bi bi-trash"></i>
-
-                                                </a>
+                                                    <button
+                                                        type="submit"
+                                                        title="Hapus"
+                                                        class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-red-50 text-red-600 transition hover:bg-red-100">
+                                                        <i class="bi bi-trash"></i>
+                                                    </button>
+                                                </form>
 
                                             </div>
 
@@ -596,3 +606,5 @@ $hamlets = mysqli_query(
 </body>
 
 </html>
+
+<?php include APP_PATH . "includes/admin/layout-bottom.php"; ?>

@@ -43,6 +43,7 @@ $population = mysqli_fetch_assoc($query);
 // HELPER
 // ======================================================
 
+include APP_PATH . "includes/admin/layout-top.php";
 ?>
 
 <!DOCTYPE html>
@@ -78,7 +79,7 @@ $population = mysqli_fetch_assoc($query);
 
         <header class="border-b border-slate-200 bg-white">
 
-            <div class="mx-auto max-w-5xl px-6 py-5">
+            <div class="mx-auto px-6 py-5">
 
                 <div class="flex items-center gap-4">
 
@@ -113,7 +114,7 @@ $population = mysqli_fetch_assoc($query);
          CONTENT
     =================================================== -->
 
-        <main class="mx-auto max-w-5xl px-6 py-8">
+        <main class="mx-auto px-6 py-8">
 
             <form
                 action="update.php"
@@ -640,3 +641,4 @@ $population = mysqli_fetch_assoc($query);
 </body>
 
 </html>
+<?php include APP_PATH . "includes/admin/layout-bottom.php"; ?>
