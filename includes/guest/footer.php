@@ -200,6 +200,7 @@ $profile = mysqli_fetch_assoc(mysqli_query($conn, "
     </div>
 
     <!-- Bottom -->
+    <!-- Bottom -->
     <div class="border-t border-teal-800">
 
         <div class="max-w-7xl mx-auto px-6 py-6">
@@ -219,9 +220,10 @@ $profile = mysqli_fetch_assoc(mysqli_query($conn, "
                 </p>
 
                 <p>
-
-                    Dibangun dengan ❤️ untuk pelayanan masyarakat.
-
+                    Dikembangkan oleh
+                    <span class="font-semibold text-white">
+                        KKN UNS 269 Tahun 2026
+                    </span>
                 </p>
 
             </div>

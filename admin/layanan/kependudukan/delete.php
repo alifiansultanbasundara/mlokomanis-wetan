@@ -60,9 +60,16 @@ $delete = mysqli_query(
 
 if ($delete) {
 
-    header("Location: index.php?success=deleted");
+    $_SESSION["success"] = "Data penduduk berhasil dihapus.";
+
+    header("Location: index.php");
     exit;
 }
+
+$_SESSION["error"] = "Data penduduk gagal dihapus.";
+
+header("Location: index.php");
+exit;
 
 
 // ======================================================

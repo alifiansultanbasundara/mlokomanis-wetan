@@ -72,6 +72,8 @@ if (!empty($population['birth_date'])) {
     }
 }
 
+include APP_PATH . "includes/admin/layout-top.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +101,7 @@ if (!empty($population['birth_date'])) {
 
 <body class="bg-slate-50">
 
-    <div class="max-w-5xl mx-auto p-4 sm:p-6">
+    <div class="p-4 sm:p-6">
 
         <!-- ==================================================
              HEADER
@@ -509,3 +511,5 @@ if (!empty($population['birth_date'])) {
 </body>
 
 </html>
+
+<?php include APP_PATH . "includes/admin/layout-bottom.php"; ?>

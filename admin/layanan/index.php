@@ -1102,6 +1102,4 @@ px-4 py-2 rounded-lg border
 
 </main>
 
-
-
 <?php include APP_PATH . "includes/admin/layout-bottom.php"; ?>
