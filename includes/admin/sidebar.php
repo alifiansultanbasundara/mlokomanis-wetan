@@ -142,25 +142,37 @@ $menus = [
 
 
     // ==========================
-    // LAYANAN ONLINE
+    // LAYANAN SURAT
     // ==========================
 
     [
-        'title' => 'Layanan Online',
+        'title' => 'Layanan Surat',
         'icon'  => 'bi-envelope-paper',
 
         'children' => [
 
             [
-                'title' => 'Pelayanan Surat & Formulir',
-                'url'   => APP_URL . 'admin/layanan/',
-                'page'  => 'layanan'
+                'title' => 'Data Kependudukan',
+                'url'   => APP_URL . 'admin/layanan/kependudukan/',
+                'page'  => 'kependudukan'
             ],
 
             [
-                'title' => 'Tracking Pengajuan',
-                'url'   => APP_URL . 'admin/layanan/pengajuan/',
-                'page'  => 'pengajuan'
+                'title' => 'Jenis Surat',
+                'url'   => APP_URL . 'admin/layanan/jenis-surat/',
+                'page'  => 'jenis-surat'
+            ],
+
+            [
+                'title' => 'Generate Surat',
+                'url'   => APP_URL . 'admin/layanan/generate/',
+                'page'  => 'generate-surat'
+            ],
+
+            [
+                'title' => 'Riwayat Surat',
+                'url'   => APP_URL . 'admin/layanan/riwayat/',
+                'page'  => 'riwayat-surat'
             ],
 
         ]

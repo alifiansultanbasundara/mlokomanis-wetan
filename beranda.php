@@ -341,7 +341,6 @@ $popup = mysqli_fetch_assoc($popupQuery);
                 <div class="relative">
 
                     <!-- Foto -->
-                    <!-- Foto -->
 
                     <div class="overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 p-3 shadow-2xl backdrop-blur">
 

@@ -17,3 +17,12 @@ define('JS_URL', ASSET_URL . 'js/');
 define('TIMEZONE', 'Asia/Jakarta');
 
 date_default_timezone_set(TIMEZONE);
+
+function e($value)
+{
+    return htmlspecialchars(
+        $value ?? '',
+        ENT_QUOTES,
+        'UTF-8'
+    );
+}
