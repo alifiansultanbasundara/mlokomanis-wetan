@@ -190,6 +190,18 @@ include APP_PATH . "includes/admin/layout-top.php"
 
         </header>
 
+        <?php if (isset($_SESSION["success"])): ?>
+            <div class="mx-auto max-w-7xl px-6 py-5">
+                <div class="rounded-xl border border-teal-200 bg-teal-50 px-5 py-4 text-teal-700">
+                    <i class="bi bi-check-circle-fill me-2"></i>
+                    <?= $_SESSION["success"] ?>
+                </div>
+                <?php unset($_SESSION["success"]); ?>
+            </div>
+        <?php endif; ?>
+
+
+
 
         <!-- ==================================================
              CONTENT
