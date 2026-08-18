@@ -609,33 +609,782 @@ include APP_PATH . "includes/admin/layout-top.php";
 
                                             <!-- KEPERLUAN -->
 
-                                            <div>
+                                            <!-- ==================================================
+     DATA TAMBAHAN SURAT
+================================================== -->
 
-                                                <label class="block text-sm font-medium text-slate-700 mb-2">
-                                                    Keperluan Surat
-                                                </label>
+                                            <div class="mt-6 pt-6 border-t border-slate-200">
 
-                                                <textarea
-                                                    name="purpose"
-                                                    rows="4"
-                                                    required
-                                                    placeholder="Contoh: Untuk keperluan izin mengadakan kegiatan keramaian..."
-                                                    class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100"></textarea>
+                                                <div class="mb-5">
 
-                                            </div>
+                                                    <h3 class="font-bold text-slate-900">
+                                                        Data Tambahan Surat
+                                                    </h3>
+
+                                                    <p class="text-sm text-slate-500 mt-1">
+                                                        Isi data sesuai kebutuhan surat yang akan dibuat.
+                                                        Kosongkan bagian yang tidak diperlukan.
+                                                    </p>
+
+                                                </div>
 
 
-                                            <div class="mt-6 flex justify-end">
+                                                <!-- ==================================================
+     IDENTITAS SURAT
+================================================== -->
 
-                                                <button
-                                                    type="submit"
-                                                    class="inline-flex items-center gap-2 rounded-xl bg-teal-600 px-6 py-3 font-semibold text-white hover:bg-teal-700">
+                                                <div class="mb-6">
 
-                                                    <i class="bi bi-file-earmark-plus"></i>
+                                                    <h4 class="text-sm font-semibold text-slate-800 mb-4">
+                                                        Identitas Surat
+                                                    </h4>
 
-                                                    Generate Surat
 
-                                                </button>
+                                                    <div class="grid sm:grid-cols-2 gap-4">
+
+                                                        <!-- NOMOR -->
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Nomor Surat
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="nomor"
+                                                                maxlength="100"
+                                                                placeholder="Contoh: 470/123/VIII/2026"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100">
+
+                                                        </div>
+
+
+                                                        <!-- GOLONGAN DARAH -->
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Golongan Darah
+                                                            </label>
+
+                                                            <select
+                                                                name="blood_type"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100">
+
+                                                                <option value="">
+                                                                    -- Pilih --
+                                                                </option>
+
+                                                                <option value="A">A</option>
+                                                                <option value="B">B</option>
+                                                                <option value="AB">AB</option>
+                                                                <option value="O">O</option>
+
+                                                            </select>
+
+                                                        </div>
+
+
+                                                        <!-- BERLAKU MULAI -->
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Berlaku Mulai
+                                                            </label>
+
+                                                            <input
+                                                                type="date"
+                                                                name="effective_from"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100">
+
+                                                        </div>
+
+
+                                                        <!-- BDT ID -->
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                ID BDT
+                                                            </label>
+
+                                                            <input
+                                                                type="number"
+                                                                name="bdt_id"
+                                                                placeholder="Contoh: 123456"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100">
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+
+                                                <!-- ==================================================
+     DATA PENDIDIKAN
+================================================== -->
+
+                                                <div class="mb-6">
+
+                                                    <h4 class="text-sm font-semibold text-slate-800 mb-4">
+                                                        Data Pendidikan
+                                                    </h4>
+
+
+                                                    <div class="grid sm:grid-cols-2 gap-4">
+
+                                                        <!-- NIS/NIM -->
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Nomor Induk Siswa/Mahasiswa
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="student_id_number"
+                                                                maxlength="100"
+                                                                placeholder="NIS / NIM"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100">
+
+                                                        </div>
+
+
+                                                        <!-- FAKULTAS -->
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Fakultas
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="faculty"
+                                                                maxlength="150"
+                                                                placeholder="Contoh: Fakultas Teknik"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100">
+
+                                                        </div>
+
+
+                                                        <!-- JURUSAN -->
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Jurusan / Program Studi
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="major"
+                                                                maxlength="150"
+                                                                placeholder="Contoh: Teknik Informatika"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100">
+
+                                                        </div>
+
+
+                                                        <!-- INSTITUSI -->
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Sekolah / Perguruan Tinggi
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="institute"
+                                                                maxlength="200"
+                                                                placeholder="Nama sekolah / perguruan tinggi"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100">
+
+                                                        </div>
+
+
+                                                        <!-- SEMESTER -->
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Kelas / Semester
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="semester"
+                                                                maxlength="50"
+                                                                placeholder="Contoh: XII / Semester 5"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100">
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+
+                                                <!-- ==================================================
+     DATA AYAH
+================================================== -->
+
+                                                <div class="mb-6">
+
+                                                    <h4 class="text-sm font-semibold text-slate-800 mb-4">
+                                                        Data Ayah
+                                                    </h4>
+
+
+                                                    <div class="grid sm:grid-cols-2 gap-4">
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Nama Ayah
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="father_name"
+                                                                maxlength="150"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                NIK Ayah
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="father_nik"
+                                                                maxlength="30"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Tempat Lahir Ayah
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="father_birth_place"
+                                                                maxlength="100"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Tanggal Lahir Ayah
+                                                            </label>
+
+                                                            <input
+                                                                type="date"
+                                                                name="father_birth_date"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Jenis Kelamin Ayah
+                                                            </label>
+
+                                                            <select
+                                                                name="father_gender"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                                <option value="">-- Pilih --</option>
+                                                                <option value="Laki-laki">Laki-laki</option>
+                                                                <option value="Perempuan">Perempuan</option>
+
+                                                            </select>
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Agama Ayah
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="father_religion"
+                                                                maxlength="50"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Pekerjaan Ayah
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="father_occupation"
+                                                                maxlength="100"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Penghasilan Ayah
+                                                            </label>
+
+                                                            <input
+                                                                type="number"
+                                                                name="father_income"
+                                                                min="0"
+                                                                step="0.01"
+                                                                placeholder="Contoh: 2500000"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div class="sm:col-span-2">
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Alamat Ayah
+                                                            </label>
+
+                                                            <textarea
+                                                                name="father_address"
+                                                                rows="3"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3"></textarea>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+
+                                                <!-- ==================================================
+     DATA IBU
+================================================== -->
+
+                                                <div class="mb-6">
+
+                                                    <h4 class="text-sm font-semibold text-slate-800 mb-4">
+                                                        Data Ibu
+                                                    </h4>
+
+
+                                                    <div class="grid sm:grid-cols-2 gap-4">
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Nama Ibu
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="mother_name"
+                                                                maxlength="150"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                NIK Ibu
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="mother_nik"
+                                                                maxlength="30"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Tempat Lahir Ibu
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="mother_birth_place"
+                                                                maxlength="100"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Tanggal Lahir Ibu
+                                                            </label>
+
+                                                            <input
+                                                                type="date"
+                                                                name="mother_birth_date"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Jenis Kelamin Ibu
+                                                            </label>
+
+                                                            <select
+                                                                name="mother_gender"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                                <option value="">-- Pilih --</option>
+                                                                <option value="Laki-laki">Laki-laki</option>
+                                                                <option value="Perempuan">Perempuan</option>
+
+                                                            </select>
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Agama Ibu
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="mother_religion"
+                                                                maxlength="50"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Pekerjaan Ibu
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="mother_occupation"
+                                                                maxlength="100"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Penghasilan Ibu
+                                                            </label>
+
+                                                            <input
+                                                                type="number"
+                                                                name="mother_income"
+                                                                min="0"
+                                                                step="0.01"
+                                                                placeholder="Contoh: 1500000"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div class="sm:col-span-2">
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Alamat Ibu
+                                                            </label>
+
+                                                            <textarea
+                                                                name="mother_address"
+                                                                rows="3"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3"></textarea>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+
+                                                <!-- ==================================================
+     PENGHASILAN ORANG TUA
+================================================== -->
+
+                                                <div class="mb-6">
+
+                                                    <h4 class="text-sm font-semibold text-slate-800 mb-4">
+                                                        Penghasilan Orang Tua
+                                                    </h4>
+
+
+                                                    <div>
+
+                                                        <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                            Total Penghasilan Orang Tua per Bulan
+                                                        </label>
+
+                                                        <input
+                                                            type="number"
+                                                            name="parent_income_total"
+                                                            min="0"
+                                                            step="0.01"
+                                                            placeholder="Contoh: 4000000"
+                                                            class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                    </div>
+
+                                                </div>
+
+
+                                                <!-- ==================================================
+     BEDA IDENTITAS
+================================================== -->
+
+                                                <div class="mb-6">
+
+                                                    <h4 class="text-sm font-semibold text-slate-800 mb-4">
+                                                        Data Beda Identitas
+                                                    </h4>
+
+                                                    <p class="text-xs text-slate-500 mb-4">
+                                                        Gunakan bagian ini untuk surat beda identitas,
+                                                        perbedaan data rekening, ijazah, BPJS, dan dokumen lainnya.
+                                                    </p>
+
+
+                                                    <div class="grid sm:grid-cols-2 gap-4">
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Dokumen Pembanding
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="identity_document"
+                                                                maxlength="150"
+                                                                placeholder="Contoh: Buku Rekening BNI"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Nomor Identitas
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="identity_number"
+                                                                maxlength="100"
+                                                                placeholder="Nomor pada dokumen"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Nama pada Dokumen
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="identity_name"
+                                                                maxlength="150"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Tempat Lahir pada Dokumen
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="identity_birth_place"
+                                                                maxlength="100"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Tanggal Lahir pada Dokumen
+                                                            </label>
+
+                                                            <input
+                                                                type="date"
+                                                                name="identity_birth_date"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Jenis Kelamin pada Dokumen
+                                                            </label>
+
+                                                            <select
+                                                                name="identity_gender"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                                <option value="">-- Pilih --</option>
+                                                                <option value="Laki-laki">Laki-laki</option>
+                                                                <option value="Perempuan">Perempuan</option>
+
+                                                            </select>
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Agama pada Dokumen
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="identity_religion"
+                                                                maxlength="50"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div>
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Pekerjaan pada Dokumen
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                name="identity_occupation"
+                                                                maxlength="100"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3">
+
+                                                        </div>
+
+
+                                                        <div class="sm:col-span-2">
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Alamat pada Dokumen
+                                                            </label>
+
+                                                            <textarea
+                                                                name="identity_address"
+                                                                rows="3"
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3"></textarea>
+
+                                                        </div>
+
+
+                                                        <div class="sm:col-span-2">
+
+                                                            <label class="block text-sm font-medium text-slate-700 mb-2">
+                                                                Keterangan Perbedaan
+                                                            </label>
+
+                                                            <textarea
+                                                                name="identity_description"
+                                                                rows="4"
+                                                                placeholder="Contoh: Terdapat perbedaan penulisan nama antara KTP dengan buku rekening."
+                                                                class="w-full rounded-xl border border-slate-300 px-4 py-3"></textarea>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+
+                                                <!-- ==================================================
+     KEPERLUAN
+================================================== -->
+
+                                                <div class="mb-6">
+
+                                                    <h4 class="text-sm font-semibold text-slate-800 mb-4">
+                                                        Keperluan Surat
+                                                    </h4>
+
+                                                    <textarea
+                                                        name="purpose"
+                                                        rows="4"
+                                                        maxlength="2000"
+                                                        placeholder="Contoh: Untuk keperluan pengajuan bantuan pendidikan..."
+                                                        class="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100"></textarea>
+
+                                                </div>
+
+
+                                                <!-- ==================================================
+                                                        GENERATE
+                                                    ================================================== -->
+
+                                                <div class="flex justify-end">
+
+                                                    <button
+                                                        type="submit"
+                                                        class="inline-flex items-center gap-2 rounded-xl bg-teal-600 px-6 py-3 font-semibold text-white hover:bg-teal-700 transition">
+
+                                                        <i class="bi bi-file-earmark-plus"></i>
+
+                                                        Generate Surat
+
+                                                    </button>
+
+                                                </div>
 
                                             </div>
 
